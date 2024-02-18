@@ -25,13 +25,13 @@ function NavBar() {
   return (
     <>
       <nav
-        className={`navbar navbar-expand-lg ${
+        className={`navbar navbar-expand ${
           isScrolled ? "float-left" : "justify-content-center"
         }`}
       >
         <div className="container-fluid">
           <div
-            className={`navbar-collapse ${
+            className={` ${
               isScrolled ? "float-left" : "justify-content-center"
             }`}
           >

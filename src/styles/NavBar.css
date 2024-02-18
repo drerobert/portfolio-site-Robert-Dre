@@ -60,7 +60,6 @@
     align-items: flex-start;
     padding: 5px; /* Adjust padding as needed */
     transition: all 1s ease-in-out; /* Add transition for a smooth effect */
-    
   }
   
   .navbar.float-left {
@@ -80,6 +79,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    align-items: center;
   }
   
   /* Styles for the floated-left state */
@@ -87,7 +87,7 @@
     margin-bottom: 100px; /* Adjusted margin between items in the float-left state */
     }
     .navbar li{
-        margin: 0 15px; /* Adjust margin between items for larger screens */
+        display: inline-block;
     }
   
   .navbar a {
