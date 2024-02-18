@@ -47,7 +47,7 @@
       }
     
       .navbar li {
-        flex-grow: 1;
+        flex-grow: 1 1;
         margin: 0; /* Remove margin between items for smaller screens */
       }
   }
@@ -57,7 +57,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     padding: 5px; /* Adjust padding as needed */
     transition: all 1s ease-in-out; /* Add transition for a smooth effect */
   }
@@ -93,7 +93,7 @@
   .navbar a {
     text-decoration: none;
     /*background-image: linear-gradient(to left, #1b2e35, #6b97b7);*/
-    color: salmon; /* Adjust link color as needed */
+    color: linear-gradient(to left, #1b2e35, #6b97b7) /* Adjust link color as needed */
   }
   
   /* Add additional styles for your content area */
