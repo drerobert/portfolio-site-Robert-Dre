@@ -1,0 +1,103 @@
+
+@keyframes floatLeft {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .container-fluid{
+    border-bottom: 1px inset #898585;
+  }
+
+  @media (max-width: 768px) {
+    .navbar{
+        width: 100%; 
+        box-shadow: none; /* Remove box shadow when floating */
+        font-size: 20px;
+        font-weight: 700;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-align: left;
+        display: block;
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .navbar-float-left{
+        position:fixed;
+        top: 0;
+        width: 20%; /* Set the width of the navbar when floating to the left */
+        box-shadow: none; /* Remove box shadow when floating */
+        font-size: 25px;
+        font-weight: 700;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-align: left
+      }
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        justify-content: space-between;
+        width: 100%;
+      }
+    
+      .navbar li {
+        flex-grow: 1;
+        margin: 0; /* Remove margin between items for smaller screens */
+      }
+  }
+
+  .navbar {
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px; /* Adjust padding as needed */
+    transition: all 1s ease-in-out; /* Add transition for a smooth effect */
+    
+  }
+  
+  .navbar.float-left {
+    position:fixed;
+    top: 0;
+    width: 150px; /* Set the width of the navbar when floating to the left */
+    box-shadow: none; /* Remove box shadow when floating */
+    font-size: 50px;
+    font-weight: 700;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: left
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styles for the floated-left state */
+    .navbar.float-left li {
+    margin-bottom: 100px; /* Adjusted margin between items in the float-left state */
+    }
+    .navbar li{
+        margin: 0 15px; /* Adjust margin between items for larger screens */
+    }
+  
+  .navbar a {
+    text-decoration: none;
+    /*background-image: linear-gradient(to left, #1b2e35, #6b97b7);*/
+    color: salmon; /* Adjust link color as needed */
+  }
+  
+  /* Add additional styles for your content area */
+  .content {
+    margin-left: 160px; /* Adjust margin to make space for the sticky navbar */
+    padding: 20px; /* Optional: Add padding to the content area */
+  }
