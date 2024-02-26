@@ -1,14 +1,16 @@
 
-@keyframes floatLeft {
+@keyframes floatIn {
     from {
-      transform: translateX(100%);
+      transform: translateX(-100%);
+      opacity: 0;
     }
     to {
       transform: translateX(0);
+      opacity: 1;
     }
   }
-  .container-fluid{
-    border-bottom: 1px inset #898585;
+  .float-left {
+    animation: floatIn 1s ease-in-out;
   }
 
   @media (max-width: 768px) {
@@ -20,51 +22,32 @@
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        text-align: left;
-        display: block;
-        flex-direction: column;
+        text-align: center;
         align-items: stretch;
-      }
-      .navbar-float-left{
-        position:fixed;
-        top: 0;
-        width: 20%; /* Set the width of the navbar when floating to the left */
-        box-shadow: none; /* Remove box shadow when floating */
-        font-size: 25px;
-        font-weight: 700;
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-        text-align: left
       }
       .navbar ul {
         list-style: none;
         padding: 0;
         margin: 0;
-        display: inline-block;
         justify-content: space-between;
         width: 100%;
       }
-    
       .navbar li {
         flex-grow: 1 1;
         margin: 0; /* Remove margin between items for smaller screens */
       }
   }
-
   .navbar {
     left: 0;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    padding: 5px; /* Adjust padding as needed */
-    transition: all 1s ease-in-out; /* Add transition for a smooth effect */
+    font-size: 50px;
   }
   
   .navbar.float-left {
-    position:fixed;
-    top: 0;
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     width: 150px; /* Set the width of the navbar when floating to the left */
     box-shadow: none; /* Remove box shadow when floating */
     font-size: 50px;
@@ -74,25 +57,27 @@
     -webkit-background-clip: text;
     text-align: left
   }
-  
+  /* Styles for the floated-left state */
+  .navbar.float-left li {
+    margin-bottom: 100px; 
+  }
+  .navbar.float-left ul {
+    border-bottom: none;
+  }
   .navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    align-items: center;
+    border-bottom: 1px inset #898585;
   }
   
-  /* Styles for the floated-left state */
-    .navbar.float-left li {
-    margin-bottom: 100px; /* Adjusted margin between items in the float-left state */
-    }
+ 
     .navbar li{
         display: inline-block;
     }
   
   .navbar a {
     text-decoration: none;
-    /*background-image: linear-gradient(to left, #1b2e35, #6b97b7);*/
     color: linear-gradient(to left, #1b2e35, #6b97b7) /* Adjust link color as needed */
   }
   
