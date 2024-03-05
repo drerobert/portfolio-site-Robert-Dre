@@ -48,14 +48,15 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 150px; /* Set the width of the navbar when floating to the left */
+    width: 20%; /* Set the width of the navbar when floating to the left */
     box-shadow: none; /* Remove box shadow when floating */
     font-size: 50px;
     font-weight: 700;
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    text-align: left
+    text-align: left;
+    justify-content: center;
   }
   /* Styles for the floated-left state */
   .navbar.float-left li {

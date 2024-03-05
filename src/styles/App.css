@@ -1,3 +1,15 @@
-.Scroll{
-    height: 200vh;
-}
+
+.app-container {
+    min-height: 200vh;
+    transition: margin-right 0.3s ease; /* Change margin-left to margin-right for smooth animation */
+  }
+  
+  .app-container.scrolled {
+    margin-right: -150px;
+    display: flex;/* Shift the entire content to the right by the width of the NavBar when scrolled */
+  }
+  
+  .main-content {
+    
+    padding: 20px; /* Add padding as needed */
+  }

@@ -6,4 +6,5 @@ header h1 {
     background-clip: text;
     -webkit-background-clip: text;
     text-align: center;
+    width: 100%;
   }

@@ -1,0 +1,37 @@
+/* TechStackImageBox.css */
+@keyframes floatRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.visible {
+  animation: floatRight 1s ease-in-out;
+}
+
+.tech-stack-image-box {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  
+}
+
+.tech-stack-image-box.visible {
+  width: 100%; /* Adjust the width as needed */
+}
+
+.image-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tech-stack-image-box img {
+  height: 100px;
+  margin-bottom: 10px;
+}
