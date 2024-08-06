@@ -16,9 +16,9 @@
   @media (max-width: 768px) {
     .navbar{
         width: 100%; 
+        font-size: 20px !important;
         box-shadow: none; /* Remove box shadow when floating */
-        font-size: 20px;
-        font-weight: 700;
+        font-weight: 200;
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
@@ -41,6 +41,7 @@
     left: 0;
     height: 100%;
     font-size: 50px;
+    transition: width 0.3s ease; /* Smooth transition for width changes */
   }
   
   .navbar.float-left {
@@ -79,7 +80,7 @@
   
   .navbar a {
     text-decoration: none;
-    color: linear-gradient(to left, #1b2e35, #6b97b7) /* Adjust link color as needed */
+    color: linear-gradient(to left, #52676e, #6b97b7) /* Adjust link color as needed */
   }
   
   /* Add additional styles for your content area */
