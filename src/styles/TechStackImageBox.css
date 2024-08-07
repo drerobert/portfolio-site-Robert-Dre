@@ -23,27 +23,21 @@
 
 .tech-stack-image-box {
   display: flex;
-  padding-left: 200px; /* Adjust this padding to create space from the menu */
+  padding-left: 25vh; /* Adjust this padding to create space from the menu */
   justify-content: center; /* Center the container horizontally */
   align-items: center; /* Center vertically if needed */
-  width: calc(100% - 300px); /* Adjust based on your layout */
-  height: 100vh; /* Adjust to fit the container height */
+  width: calc(100% - 10vw); /* Adjust based on your layout */
   position: relative;
   opacity: 0; /* Start as invisible */
   transition: opacity 0.3s ease; /* Smooth transition for visibility */
-  margin: auto; /* Center the container */
   bottom: -100vh;
 }
 
 .image-container {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping */
-  border: 2px solid #ccc; /* Add border to the box */
   padding: 10px; /* Add padding inside the box */
-  background-color: #f9f9f9; /* Add background color to the box */
   width: calc(100% - 300px); /* Adjust to fit the available space */
-
-
   justify-content: space-around; /* Space items evenly */
   align-items: center; /* Center items vertically */
   
@@ -51,7 +45,7 @@
 }
 
 .tech-stack-image-box img {
-  height: 100%; /* Default height for all images */
+  height: 15vh; /* Default height for all images */
   margin: 20px; /* Add more margin between images to spread them out */
   transition: transform 0.3s ease; /* Smooth transition for wobble */
 }
@@ -59,13 +53,6 @@
 .tech-stack-image-box img:hover {
   animation: wobble 0.5s infinite; /* Wobble animation on hover */
 }
-
-.tech-stack-image-box img.kotlin,
-.tech-stack-image-box img.android-compose {
-  height: 70px; /* Larger size for specific images */
-  margin: 25px; /* Add more margin for larger images to spread them out */
-}
-
 .image-text {
   position: absolute;
   bottom: 100%; /* Position above the image */
@@ -84,11 +71,6 @@
 
 .image-item:hover .image-text {
   opacity: 1; /* Show text on hover */
-}
-
-.image-item img {
-  height: 150px;
-  width: 100%;
 }
 
 .image-item {
@@ -121,11 +103,9 @@
   .image-container {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping */
-    border: 2px solid #ccc; /* Add border to the box */
     padding: 10px; /* Add padding inside the box */
     background-color: #f9f9f9; /* Add background color to the box */
     width: 100%; 
-  
     justify-content: space-around; /* Space items evenly */
     align-items: center; /* Center items vertically */
   }
@@ -139,13 +119,6 @@
   
   .tech-stack-image-box img:hover {
     animation: wobble 0.5s infinite; /* Wobble animation on hover */
-  }
-  
-  .tech-stack-image-box img.kotlin,
-  .tech-stack-image-box img.android-compose {
-    height: 5vh; /* Larger size for specific images */
-    width: 50%;
-    margin: 25px; /* Add more margin for larger images to spread them out */
   }
   
   .image-text {

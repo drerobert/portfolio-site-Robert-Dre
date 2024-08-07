@@ -3,14 +3,14 @@ import "../styles/TechStackImageBox.css";
 
 function TechStackImageBox() {
   const images = [
-    { src: "Icons/android_espresso_icon.png", className: "android", text: "Android Espresso" },
+    { src: "Icons/android_espresso_icon.png", className: "", text: "Android Espresso" },
     { src: "Icons/Appelium_icon.png", className: "", text: "Appium" },
     { src: "Icons/atlassian_jira_icon.png", className: "", text: "Jira" },
     { src: "Icons/bitbucket_icon.png", className: "", text: "Bitbucket" },
     { src: "Icons/java-icon.png", className: "", text: "Java" },
     { src: "Icons/Jenkins_icon.png", className: "", text: "Jenkins" },
-    { src: "Icons/jetpack-compose-icon.png", className: "android-compose", text: "Jetpack Compose" },
-    { src: "Icons/Kotlin_icon.png", className: "kotlin", text: "Kotlin" },
+    { src: "Icons/jetpack-compose-icon.png", className: "", text: "Jetpack Compose" },
+    { src: "Icons/Kotlin_icon.png", className: "", text: "Kotlin" },
     { src: "Icons/playwright_icon.png", className: "", text: "Playwright" },
     { src: "Icons/Robot-framework-icon.png", className: "", text: "Robot Framework" },
     { src: "Icons/selenium_icon.png", className: "", text: "Selenium" }
