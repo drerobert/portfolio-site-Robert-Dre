@@ -32,6 +32,7 @@
   opacity: 0; /* Start as invisible */
   transition: opacity 0.3s ease; /* Smooth transition for visibility */
   margin: auto; /* Center the container */
+  bottom: -100vh;
 }
 
 .image-container {
@@ -45,12 +46,12 @@
 
   justify-content: space-around; /* Space items evenly */
   align-items: center; /* Center items vertically */
-  gap: 20px; /* Space between items */
+  
   height: 100%;
 }
 
 .tech-stack-image-box img {
-  height: 50px; /* Default height for all images */
+  height: 100%; /* Default height for all images */
   margin: 20px; /* Add more margin between images to spread them out */
   transition: transform 0.3s ease; /* Smooth transition for wobble */
 }
@@ -104,6 +105,62 @@
   opacity: 1; /* Make visible when in view */
 }
 
+@media (max-width: 768px) {
+  .tech-stack-image-box {
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center vertically if needed */
+    width: 100% ;
+    position: relative;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+    margin: auto; /* Center the container */
+    bottom: -100vh;
+  }
+  
+  .image-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    border: 2px solid #ccc; /* Add border to the box */
+    padding: 10px; /* Add padding inside the box */
+    background-color: #f9f9f9; /* Add background color to the box */
+    width: 100%; 
+  
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .tech-stack-image-box img {
+    width: 5vh;
+    height: 100%;
+    margin: 20px; /* Add more margin between images to spread them out */
+    transition: transform 0.3s ease; /* Smooth transition for wobble */
+  }
+  
+  .tech-stack-image-box img:hover {
+    animation: wobble 0.5s infinite; /* Wobble animation on hover */
+  }
+  
+  .tech-stack-image-box img.kotlin,
+  .tech-stack-image-box img.android-compose {
+    height: 5vh; /* Larger size for specific images */
+    width: 50%;
+    margin: 25px; /* Add more margin for larger images to spread them out */
+  }
+  
+  .image-text {
+    position: absolute;
+    bottom: 100%; /* Position above the image */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    margin-bottom: 10px; /* Adjust spacing between text and image */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 5px;
+    border-radius: 3px;
+    pointer-events: none; /* Make text non-interactive */
+    z-index: 1;
+  }
+}
 
 @keyframes fadeInUp {
   from {
