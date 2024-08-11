@@ -24,6 +24,10 @@
         -webkit-background-clip: text;
         text-align: center;
         align-items: stretch;
+        height: auto; /* Adjust height for mobile */
+      }
+      .main-content {
+        margin-left: 0; /* Remove margin for mobile */
       }
       .navbar ul {
         list-style: none;
@@ -42,15 +46,17 @@
     height: 100%;
     font-size: 50px;
     transition: width 0.3s ease; /* Smooth transition for width changes */
+    display: flex;
+    flex-direction: column;
   }
   
   .navbar.float-left {
-    z-index: 1;
+    z-index: 10;
     position: fixed;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 25vw; /* Set the width of the navbar when floating to the left */
+    width: 20vw; /* Set the width of the navbar when floating to the left */
     box-shadow: none; /* Remove box shadow when floating */
     font-size: 50px;
     font-weight: 700;

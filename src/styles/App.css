@@ -1,18 +1,74 @@
 
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+#welcome {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21f700;
+}
+
+#technologies {
+  background-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#self-testing {
+  background-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact {
+  background-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-message {
+  color: #d9534f; /* Red color for error messages */
+  font-weight: bold;
+  font-size: 0.875rem; /* Smaller font size for error messages */
+  display: block; /* Ensure the message appears as a block */
+}
+
 .app-container {
-    min-height: 200vh;
-    transition: margin-right 0.3s ease; /* Change margin-left to margin-right for smooth animation */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200vh; /* Ensure it at least fills the screen */
+    transition: margin-right 0.3s ease; /* Smooth animation */
     position: relative;
   }
   
   .app-container.scrolled {
-    margin-right: -150px;
     display: flex;/* Shift the entire content to the right by the width of the NavBar when scrolled */
   }
   
   .main-content {
-    padding: 20px; /* Add padding as needed */
-    margin-top: 60px; /* Adjust based on the height of your heading */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 130vh;
+    margin: 0 auto;
+    margin-left: 20vw; 
+    margin-right: 10vw;
+    flex: 1;
   }
 
   .svg-container {
@@ -22,11 +78,15 @@
     opacity: 0;
     transform: translateY(-100%);
     transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
   }
   
   .svg-container.scrolled {
     opacity: 1;
     transform: translateY(0);
+    width: 10vw;
+    height: 100%;
+    align-items: center;
   }
   
   .vertical-text {
@@ -35,7 +95,48 @@
     font-weight: bold;
     fill: url(#gradient);
   }
-  
+
+  /* Media Query for mobile and smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%; /* Full width for mobile */
+    height: auto; /* Adjust height for mobile */
+    position: static; /* Static positioning for mobile */
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove margin for mobile */
+  }
+
+  .svg-container {
+    display: none; /* Hide SVG container on mobile */
+  }
+}
+
+  /* Media Query for tablet and small screens */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 100%;
+    font-size: 0.875rem; /* Smaller font size for tablets */
+  }
+
+  .navbar .nav-link {
+    padding: 0.75rem; /* Smaller padding for tablets */
+    font-size: 0.875rem; /* Adjust font size */
+  }
+}
+
+/* Media Query for very small screens */
+@media (max-width: 480px) {
+  .navbar {
+    font-size: 0.75rem; /* Even smaller font size for very small screens */
+  }
+
+  .navbar .nav-link {
+    padding: 0.5rem; /* Smaller padding for very small screens */
+    font-size: 0.75rem; /* Adjust font size */
+  }
+}
   @keyframes gradientScroll {
     0% {
       stop-color: #f7350a;

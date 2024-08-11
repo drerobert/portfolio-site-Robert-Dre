@@ -1,56 +1,76 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, RefObject } from "react";
 import "../styles/NavBar.css";
 
 interface NavBarProps {
   isScrolled: boolean;
-  techStackRef: React.RefObject<HTMLDivElement>;
-  scrollToSection: (ref: React.RefObject<HTMLElement>) => void;
+  headingRef: RefObject<HTMLElement>;
+  techStackRef: RefObject<HTMLElement>;
+  selfTestingRef: RefObject<HTMLElement>;
+  contactRef: RefObject<HTMLElement>;
+  scrollToSection: (ref: RefObject<HTMLElement>) => void;
 }
 
-function NavBar({ isScrolled, techStackRef, scrollToSection }: NavBarProps) {
+function NavBar({
+  isScrolled,
+  headingRef,
+  techStackRef,
+  selfTestingRef,
+  contactRef,
+  scrollToSection,
+}: NavBarProps) {
   const [stickyClass, setStickyClass] = useState("justify-content-center");
-  let ListItems = ["Home", "Technologies", "Projects", "Contact"];
-  const desktopWidthThreshold = 768;
-  const isDesktopOrLaptop = window.innerWidth >= desktopWidthThreshold;
 
+  const ListItems = ["Home", "Welcome", "Technologies", "Testing", "Contact"];
+  
   useEffect(() => {
     const handleResize = () => {
+      const isDesktopOrLaptop = window.innerWidth >= 768;
       if (isDesktopOrLaptop) {
-        isScrolled ? setStickyClass("float-left") : setStickyClass("justify-content-center");
+        setStickyClass(isScrolled ? "float-left" : "justify-content-center");
       } else {
-        isScrolled ? setStickyClass("justify-content-center fixed-top") : setStickyClass("justify-content-center");
+        setStickyClass(isScrolled ? "justify-content-center fixed-top" : "justify-content-center");
       }
     };
 
-    handleResize();
+    handleResize(); // Call on mount
     window.addEventListener("resize", handleResize);
-   
+    
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [isScrolled, isDesktopOrLaptop]);
+  }, [isScrolled]);
 
   const handleClick = (item: string) => {
-    if (item === "Technologies") {
-      scrollToSection(techStackRef);
+    switch (item) {
+      case "Welcome":
+        scrollToSection(headingRef);
+        break;
+      case "Technologies":
+        scrollToSection(techStackRef);
+        break;
+      case "Testing":
+        scrollToSection(selfTestingRef);
+        break;
+      case "Contact":
+        scrollToSection(contactRef);
+        break;
+      default:
+        break;
     }
-    // Add more conditions for other sections as needed
   };
 
   return (
     <nav className={`navbar navbar-expand ${stickyClass}`}>
       <div>
-        <div className={`${stickyClass}`}>
-          <ul className="nav navbar-nav">
-            {ListItems.map((item) => (
-              <li key={item} className="nav-item px-5">
-                <a className="nav-link" href="#" onClick={() => handleClick(item)}>
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul className="nav navbar-nav">
+          {ListItems.map((item) => (
+            <li key={item} className="nav-item px-5">
+              <a className="nav-link" onClick={() => handleClick(item)}>
+                {item}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );

@@ -1,0 +1,34 @@
+/* styles/App.css */
+.test-results {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.test-results table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.test-results th, .test-results td {
+  padding: 12px;
+  text-align: left;
+}
+
+.test-results th {
+  background-color: #f4f4f4;
+}
+
+.test-results tr.passed {
+  background-color: #d4edda;
+}
+
+.test-results tr.failed {
+  background-color: #f8d7da;
+}
+
+.test-results td {
+  font-weight: bold;
+}

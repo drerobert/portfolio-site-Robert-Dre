@@ -1,12 +1,18 @@
+// App.tsx
 import "./styles/App.css";
 import NavBar from "./components/NavBar";
 import Heading from "./components/Heading";
 import TechStackImageBox from "./components/TechStackImageBox";
 import React, { useState, useEffect, useRef } from "react";
+import SelfTestingSection from "./components/SelfTestingSection";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const techStackRef = useRef<HTMLDivElement>(null);
+  const selfTestingRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,31 +43,45 @@ function App() {
   };
 
   return (
-    <>
-      <div className="app-container">
-        <Heading />
-        <NavBar isScrolled={isScrolled} techStackRef={techStackRef} scrollToSection={scrollToSection} />
-        <div className={`main-content ${isScrolled ? "scrolled" : ""}`}>
-          <div ref={techStackRef}>
-            <TechStackImageBox />
-          </div>
-          {/* Other components/content on the right */}
-        </div>
-        <div className={`svg-container ${isScrolled ? "scrolled" : ""}`}>
-          <svg className="vertical-text">
-            <defs>
-              <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop id="gradientStop1" offset="0%" stopColor="#f7350a" />
-                <stop id="gradientStop2" offset="20%" stopColor="#09c0fd" />
-              </linearGradient>
-            </defs>
-            <text x="10" y="50" transform="rotate(90 10,50)">
-              D. Robert
-            </text>
-          </svg>
-        </div>
+    <div className="app-container">
+      <Heading/>
+      <NavBar
+        isScrolled={isScrolled}
+        headingRef={headingRef}
+        techStackRef={techStackRef}
+        selfTestingRef={selfTestingRef}
+        contactRef={contactRef}
+        scrollToSection={scrollToSection}
+      />
+
+      <div className={`main-content ${isScrolled ? "scrolled" : ""}`}>
+        <section className="section" id="welcome" ref={headingRef}>
+          <h1>Hello, I'm Robert</h1>
+        </section>
+        <section className="section" id="technologies" ref={techStackRef}>
+          <TechStackImageBox />
+        </section>
+        <section className="section" id="self-testing" ref={selfTestingRef}>
+          <SelfTestingSection />
+        </section>
+        <section className="section" id="contact" ref={contactRef}>
+          <ContactForm />
+        </section>
       </div>
-    </>
+      <section className={`svg-container ${isScrolled ? "scrolled" : ""}`}>
+        <svg className="vertical-text">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop id="gradientStop1" offset="0%" stopColor="#f7350a" />
+              <stop id="gradientStop2" offset="20%" stopColor="#09c0fd" />
+            </linearGradient>
+          </defs>
+          <text x="10" y="50" transform="rotate(90 10,50)">
+            D. Robert
+          </text>
+        </svg>
+      </section>
+    </div>
   );
 }
 
