@@ -79,7 +79,7 @@ const ContactForm: React.FC = () => {
         />
         {errors.message && <p className="error-message">{errors.message}</p>}
       </div>
-      {submitted && <p>Thank you for your message!</p>}
+      {submitted && <p>Thank you for your message and have a great day!</p>}
       <button type="submit">Send</button>
     </form>
   );
