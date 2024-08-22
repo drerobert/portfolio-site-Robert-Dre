@@ -38,14 +38,14 @@
       }
       .navbar li {
         flex-grow: 1 1;
-        margin: 0; /* Remove margin between items for smaller screens */
+        margin: 0; 
       }
   }
   .navbar {
     left: 0;
     height: 100%;
-    font-size: 50px;
-    transition: width 0.3s ease; /* Smooth transition for width changes */
+    font-size: 4vh;
+    transition: width 0.3s ease; 
     display: flex;
     flex-direction: column;
   }
@@ -56,20 +56,19 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 20vw; /* Set the width of the navbar when floating to the left */
-    box-shadow: none; /* Remove box shadow when floating */
-    font-size: 50px;
-    font-weight: 700;
+    width: 20vw;
+    box-shadow: none; 
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    text-align: left;
-    
     justify-content: center;
   }
+
   /* Styles for the floated-left state */
   .navbar.float-left li {
-    margin-bottom: 100px; 
+    margin-bottom: 10vh;
+    width: 20vw;
+    cursor: pointer;
   }
   .navbar.float-left ul {
     border-bottom: none;
@@ -88,11 +87,10 @@
   
   .navbar a {
     text-decoration: none;
-    color: linear-gradient(to left, #ffffff, #b4cee1) /* Adjust link color as needed */
+    color: linear-gradient(to left, #ffffff, #b4cee1) 
   }
-  
-  /* Add additional styles for your content area */
-  .content {
-    margin-left: 160px; /* Adjust margin to make space for the sticky navbar */
-    padding: 20px; /* Optional: Add padding to the content area */
+
+  .nav-item.active .nav-link {
+    color: #66a7e7; 
+    font-weight: bold;
   }

@@ -5,6 +5,7 @@ function Heading() {
     <>
       <header>
         <h1>Róbert Drenyovszki </h1>
+        <h2>QA Engineer</h2>
       </header>
     </>
   );
