@@ -33,21 +33,6 @@ html, body {
   margin-left:5vw;
   margin-right:5vw;
 } 
-#welcome {
-  
-}
-
-#technologies {
-  
-}
-
-#self-testing {
-  
-}
-
-#contact {
-  
-}
 
 .error-message {
   color: #d9534f; /* Red color for error messages */
