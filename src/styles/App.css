@@ -4,7 +4,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  
 }
 
 .section {
@@ -32,6 +31,10 @@ html, body {
   display: flex;
   margin-left:5vw;
   margin-right:5vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
 } 
 
 .error-message {
@@ -48,7 +51,7 @@ html, body {
     min-height: 200vh; /* Ensure it at least fills the screen */
     transition: margin-right 0.3s ease; /* Smooth animation */
     position: relative;
-    background: linear-gradient(315deg,#ffffff,100%,#d7ebed);
+    background: linear-gradient(315deg, #DBD8F0, #dedede); /* Dark gradient background for depth */
   }
   
   .app-container.scrolled {
@@ -85,8 +88,6 @@ html, body {
     height:50vh;
     font-weight: bold;
     fill: url(#gradient);
-    
-    
   }
 
   /* Media Query for mobile and smaller screens */
@@ -130,14 +131,114 @@ html, body {
     font-size: 0.75rem; /* Adjust font size */
   }
 }
-  @keyframes gradientScroll {
-    0% {
-      stop-color: #61b7f9;
-    }
-    50% {
-      stop-color: #4d83a7;
-    }
-    100% {
-      stop-color: #2d5270;
-    }
+
+@keyframes gradientScroll {
+  0% {
+    stop-color: #61b7f9;
   }
+  50% {
+    stop-color: #4d83a7;
+  }
+  100% {
+    stop-color: #2d5270;
+  }
+}
+.welcome-item {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  font-size: 5rem;
+  position: absolute;
+  font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
+}
+
+.name {
+  font-size: 10rem; /* Adjust as needed */
+  z-index: 1; /* Place behind image */
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
+  letter-spacing: 0.1em; /* Add spacing between letters */
+  font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
+}
+
+.title {
+  font-size: 10rem; /* Adjust as needed */
+  z-index: 1; /* Place behind image */
+  align-items: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
+  letter-spacing: 0.1em; /* Add spacing between letters */
+  font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
+}
+
+.name.visible,
+.title.visible {
+  opacity: 1;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: float 1.5s ease-in-out, transform 1.5s ease-in-out;
+  z-index: 2; /* Place above name and title */
+}
+
+.image.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.overlay-text {
+  font-size: 2rem;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out 1.5s;
+  color: white; /* Adjust color as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for better readability */
+  z-index: 2; /* Place above name and title */
+}
+
+.image.visible .overlay-text {
+  opacity: 1;
+}
+
+.image img {
+  border-radius: 50%; /* Makes the image round */
+  width: 20vw; /* Adjust size as needed */
+  height: 20vw; /* Adjust size as needed */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .name,
+  .title {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+    text-shadow: none; /* Optional: Remove shadow for simplicity */
+  }
+
+  .title {
+    font-size: 3rem; /* Smaller font size for smaller screens */
+  }
+
+  .image {
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: float 1.5s ease-in-out, transform 1.5s ease-in-out;
+    margin-bottom: 1rem; /* Add some spacing */
+    z-index: 2; /* Ensure image is above text */
+  }
+
+  .image img {
+    width: 50vw; /* Adjust size for smaller screens */
+    height: 50vw; /* Adjust size for smaller screens */
+    max-width: 250px; /* Max size for smaller screens */
+    max-height: 250px; /* Max size for smaller screens */
+  }
+
+  .overlay-text {
+    font-size: 1rem; /* Smaller font size for mobile */
+    margin-top: 5px;
+  }
+}
