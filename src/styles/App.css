@@ -51,7 +51,7 @@ html, body {
     min-height: 200vh; /* Ensure it at least fills the screen */
     transition: margin-right 0.3s ease; /* Smooth animation */
     position: relative;
-    background: linear-gradient(315deg, #DBD8F0, #dedede); /* Dark gradient background for depth */
+    background: #F5F5F5 ; /* Dark gradient background for depth */
   }
   
   .app-container.scrolled {
@@ -134,13 +134,13 @@ html, body {
 
 @keyframes gradientScroll {
   0% {
-    stop-color: #61b7f9;
+    stop-color: #1ABC9C ;
   }
   50% {
-    stop-color: #4d83a7;
+    stop-color: #5b87a4;
   }
   100% {
-    stop-color: #2d5270;
+    stop-color: #1bbd9c ;
   }
 }
 .welcome-item {
@@ -153,6 +153,7 @@ html, body {
 
 .name {
   font-size: 10rem; /* Adjust as needed */
+  color: #34495E ;
   z-index: 1; /* Place behind image */
   align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
@@ -163,6 +164,7 @@ html, body {
 .title {
   font-size: 10rem; /* Adjust as needed */
   z-index: 1; /* Place behind image */
+  color: #34495E ;
   align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
   letter-spacing: 0.1em; /* Add spacing between letters */

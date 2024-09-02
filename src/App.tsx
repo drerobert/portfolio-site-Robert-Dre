@@ -92,7 +92,7 @@ function App() {
               QA Engineer
             </div>
             <div className={`welcome-item image ${showImage ? "visible" : ""}`}>
-              <img src="public\Images\portrait.jfif" alt="Drenyovszki Robert" />
+              <img src="Images\portrait.jfif" alt="Drenyovszki Robert" />
               <div className="overlay-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
             </div>
           </div>
@@ -117,8 +117,8 @@ function App() {
         <svg className="vertical-text">
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop id="gradientStop1" offset="0%" stopColor="#61b7f9" />
-              <stop id="gradientStop2" offset="50%" stopColor="#4d83a7" />
+              <stop id="gradientStop1" offset="0%" stopColor="#1ABC9C" />
+              <stop id="gradientStop2" offset="50%" stopColor="#1bbd9c" />
               
             </linearGradient>
           </defs>

@@ -47,7 +47,7 @@
     transition: width 0.3s ease; 
     display: flex;
     flex-direction: column;
-    background-color: #54577C; /* Dark background for navbar */
+    
   }
   
   .navbar.float-left {
@@ -85,6 +85,6 @@
     }
 
   .nav-item.active .nav-link {
-    color: #66a7e7; 
+    color: #1ABC9C ; 
     font-weight: bold;
   }

@@ -49,6 +49,7 @@
 
 .tech-stack-image-box img:hover {
   animation: wobble 0.5s infinite; /* Wobble animation on hover */
+  filter: brightness(1.2);
 }
 .image-text {
   position: absolute;
