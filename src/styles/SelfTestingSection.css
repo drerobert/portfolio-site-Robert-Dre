@@ -1,58 +1,8 @@
-.test-results {
-  margin-top: 20px;
-  border-collapse: collapse;
-  width: 100%;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  overflow: hidden;
-}
 
-.test-results table {
-  width: 100%;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.test-results th,
-.test-results td {
-  padding: 12px;
-  text-align: left;
-}
-
-.test-results th {
-  background-color: #e9ecef;
-}
-
-.test-results tr.passed {
-  background-color: #d4edda;
-}
-
-.test-results tr.failed {
-  background-color: #f8d7da;
-}
 
 .test-results td {
   font-weight: bold;
   color: #333;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:disabled {
-  background-color: #6c757d;
-}
-
-button:hover:not(:disabled) {
-  background-color: #0056b3;
 }
 
 /* Responsive adjustments */

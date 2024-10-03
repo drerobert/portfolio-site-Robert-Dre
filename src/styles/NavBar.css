@@ -41,13 +41,15 @@
         margin: 0; 
       }
   }
+
   .navbar {
     left: 0;
     font-size: 5vh;
     transition: width 0.3s ease; 
     display: flex;
     flex-direction: column;
-    
+    background: linear-gradient(rgba(15, 253, 209, 0.259), rgba(0, 127, 127, 0));
+    animation: lightReflection 4s ease-in-out infinite;
   }
   
   .navbar.float-left {
@@ -56,6 +58,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-top: 15vh;
     width: 20vw;
     box-shadow: none; 
     color: transparent;
@@ -78,11 +81,9 @@
     padding: 0;
     margin: 0;
   }
-  
- 
-    .navbar li{
-        display: inline-block;
-    }
+  .navbar li{
+     display: inline-block;
+  }
 
   .nav-item.active .nav-link {
     color: #1ABC9C ; 

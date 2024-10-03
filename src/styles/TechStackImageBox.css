@@ -23,28 +23,27 @@
 
 .tech-stack-image-box {
   display: flex;
-  justify-content: center; /* Center the container horizontally */
-  align-items: center; /* Center vertically if needed */
-  width: calc(100% - 10vw); /* Adjust based on your layout */
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 10vw);
   position: relative;
-  opacity: 0; /* Start as invisible */
-  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+  transition: background-image 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .image-container {
   display: flex;
-  flex-wrap: wrap; /* Allow wrapping */
-  padding: 10px; /* Add padding inside the box */
-  width: calc(100% - 300px); /* Adjust to fit the available space */
-  justify-content: space-around; /* Space items evenly */
-  align-items: center; /* Center items vertically */
+  flex-wrap: wrap;
+  padding: 10px; 
+  width: calc(100% - 300px); 
+  justify-content: space-around;
+  align-items: center; 
   height: 100%;
 }
 
 .tech-stack-image-box img {
-  height: 15vh; /* Default height for all images */
-  margin: 20px; /* Add more margin between images to spread them out */
-  transition: transform 0.3s ease; /* Smooth transition for wobble */
+  height: 15vh; 
+  margin: 20px; 
+  transition: transform 0.3s ease; 
 }
 
 .tech-stack-image-box img:hover {
@@ -139,4 +138,17 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out;
+  z-index: 0; /* Ensure it's below the images */
 }

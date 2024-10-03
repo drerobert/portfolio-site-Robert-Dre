@@ -1,76 +1,43 @@
-.form-container {
-  background-color: #f9f9f9;
-  padding: 2rem;
-  border-radius: 10px;
-  max-width: 500px;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: Arial, sans-serif;
+.btn-primary{
+  background-color: rgb(11, 180, 124);
+  color: rgb(0, 0, 0); /* Button text color */
+  border: none; /* Remove border */
+  transition: background-color 0.3s; /* Smooth transition */
 }
 
-.form-container h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #333;
+.btn-primary:hover{
+  background-color: #00ff9d;
 }
 
-.form-container div {
-  margin-bottom: 1rem;
-}
-
-.form-container label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #555;
-}
-
-.form-container input,
-.form-container textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-
-.form-container input:focus,
-.form-container textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-.form-container .error {
-  border-color: #ff4d4f;
-}
-
-.form-container .error-message {
-  color: #ff4d4f;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-}
-
-.form-container .success-message {
-  color: #28a745;
-  font-size: 1rem;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.form-container button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
+.btn-info{
+  width: 30vh;
+  font-weight: 600;
+  font-size: 2vh;
+  height: 15vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  color: rgb(0, 0, 0);
+  padding: 29px 30px;
+  transition: 1312ms;
+  width: 181px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 23px 25px 25px;
+  background: linear-gradient(157deg, rgb(0, 204, 136) 0%, rgb(55, 130, 124) 100%);
+  --hover-width: 144px;
+  --hover-borderSize: 0px;
+  --hover-borderc: #000000;
+  --hover-bgc: #00d176;
+  --hover-color: #ffffffd3;
+  flex-direction: row-reverse;
 }
 
-.form-container button:hover {
-  background-color: #0056b3;
+.btn-info:hover{
+  color: rgba(255, 255, 255, 0.827);
+  width: 144px;
+  background: rgb(0, 209, 118) none repeat scroll 0% 0% / auto padding-box border-box;
+  border-width: 0px;
+  border-style: solid;
 }

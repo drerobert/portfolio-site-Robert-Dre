@@ -1,5 +1,7 @@
-// ContactForm.tsx
+import "../styles/ContactForm.css";
+
 import React, { useState } from 'react';
+
 
 interface FormState {
   name: string;
@@ -45,43 +47,48 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Contact Me</h2>
-      <div>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formState.name}
-          onChange={handleChange}
-        />
-        {errors.name && <p className="error-message">{errors.name}</p>}
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formState.email}
-          onChange={handleChange}
-        />
-        {errors.email && <p className="error-message">{errors.email}</p>}
-      </div>
-      <div>
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formState.message}
-          onChange={handleChange}
-        />
-        {errors.message && <p className="error-message">{errors.message}</p>}
-      </div>
-      {submitted && <p>Thank you for your message and have a great day!</p>}
-      <button type="submit">Send</button>
-    </form>
+    <div className="contact-section"> 
+      <form onSubmit={handleSubmit} className="p-4 border rounded bg-light "> 
+        <h2 className="mb-4">Contact Me</h2>
+        <div className="mb-3">
+          <label htmlFor="name" className="form-label">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formState.name}
+            onChange={handleChange}
+            className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+          />
+          {errors.name && <div className="invalid-feedback">{errors.name}</div>} 
+        </div>
+        <div className="mb-3">
+          <label htmlFor="email" className="form-label">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formState.email}
+            onChange={handleChange}
+            className={`form-control btn-block ${errors.email ? 'is-invalid' : ''}`}
+          />
+          {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+        </div>
+        <div className="mb-3">
+          <label htmlFor="message" className="form-label">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formState.message}
+            onChange={handleChange}
+            className={`form-control ${errors.message ? 'is-invalid' : ''}`}
+          />
+          {errors.message && <div className="invalid-feedback">{errors.message}</div>}
+        </div>
+        {submitted && <div className="alert alert-success">Thank you for your message and have a great day!</div>}
+        <button type="submit" className="btn btn-primary btn-lg">Send</button>
+      </form>
+    </div>
   );
 };
 

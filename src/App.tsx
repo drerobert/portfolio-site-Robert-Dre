@@ -1,11 +1,12 @@
 // App.tsx
-import "./styles/App.css";
+
 import NavBar from "./components/NavBar";
 import TechStackImageBox from "./components/TechStackImageBox";
 import React, { useState, useEffect, useRef } from "react";
 import SelfTestingSection from "./components/SelfTestingSection";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import "./styles/App.css";
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,7 +17,7 @@ function App() {
   const [showName, setShowName] = useState(true);
   const [showTitle, setShowTitle] = useState(false);
   const [showImage, setShowImage] = useState(false);
-  const [,setOverlayTextVisible] = useState(false);
+  const [, setOverlayTextVisible] = useState(false);
   const [animationStarted, setAnimationStarted] = useState(false);
 
   useEffect(() => {
@@ -41,7 +42,7 @@ function App() {
         setOverlayTextVisible(true); // Show overlay text after image is fully visible
       }, 5000); // Adjust timing based on the total duration of image transition
     }
-  
+
 
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 400);
@@ -66,7 +67,7 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrolled,animationStarted]);
+  }, [isScrolled, animationStarted]);
 
   const scrollToSection = (sectionRef: React.RefObject<HTMLElement>) => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -83,6 +84,21 @@ function App() {
           contactRef={contactRef}
           scrollToSection={scrollToSection}
         />
+        <svg
+          width="100%"
+          height="120"
+          viewBox="0 0 1440 100"
+          preserveAspectRatio="none"
+          style={{ display: 'block' }}
+          >
+          <path
+            d="M0 50 C 720 0, 720 100, 1440 50" // A single bump from left to right
+            fill="none"
+            stroke="#77cccc" // Your line color
+            strokeWidth="3" // Slightly thicker for better visibility
+            className="waving-line" // Class for animation
+          />
+        </svg>
         <section className="section" id="welcome" ref={headingRef}>
           <div id="welcome-wrapper">
             <div className={`welcome-item name ${showName ? "visible" : ""}`}>
@@ -93,7 +109,12 @@ function App() {
             </div>
             <div className={`welcome-item image ${showImage ? "visible" : ""}`}>
               <img src="Images\portrait.jfif" alt="Drenyovszki Robert" />
-              <div className="overlay-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+              <div className="overlay-text">
+                Hope you find what you are looking for in this vast space known as the internet.
+                This site is made from stratch with the intention of trying out new things and in the mean time show people my work experience.
+                It started as a simple site to show my CV and techstack. It became a little creative project.
+                It's not much, but I enjoyed making it and it's the point of everything. 
+              </div>
             </div>
           </div>
         </section>
@@ -110,6 +131,11 @@ function App() {
         <section className="section" id="contact" ref={contactRef}>
           <div className="section-wrapper">
             <ContactForm />
+            <div className="download-cv">
+              <a href="Files/Drenyovszki_Robert_CV.pdf" download="Drenyovszki_Robert_CV.pdf">
+                <button className="btn btn-info btn-lg">Download CV</button>
+              </a>
+            </div>
           </div>
         </section>
       </div>
@@ -117,9 +143,8 @@ function App() {
         <svg className="vertical-text">
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop id="gradientStop1" offset="0%" stopColor="#1ABC9C" />
-              <stop id="gradientStop2" offset="50%" stopColor="#1bbd9c" />
-              
+              <stop id="gradientStop1" offset="0%" stopColor="#1ccfac" />
+              <stop id="gradientStop2" offset="50%" stopColor="#0e9479" />
             </linearGradient>
           </defs>
           <text x="10" y="50" transform="rotate(90 10,50)">
@@ -127,6 +152,21 @@ function App() {
           </text>
         </svg>
       </section>
+        <svg
+      width="100%"
+      height="120"
+      viewBox="0 0 1440 100"
+      preserveAspectRatio="none"
+      style={{ display: 'block' }}
+    >
+      <path
+        d="M0 50 C 720 0, 720 100, 1440 50" // A single bump from left to right
+        fill="none"
+        stroke="#77cccc" // Your line color
+        strokeWidth="3" // Slightly thicker for better visibility
+        className="waving-line" // Class for animation
+      />
+    </svg>
       <Footer />
     </div>
   );

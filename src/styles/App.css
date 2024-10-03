@@ -12,7 +12,6 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .section-wrapper {
@@ -134,13 +133,13 @@ html, body {
 
 @keyframes gradientScroll {
   0% {
-    stop-color: #1ABC9C ;
+    stop-color: #0e9479 ;
   }
   50% {
-    stop-color: #5b87a4;
+    stop-color: #07cc7a;
   }
   100% {
-    stop-color: #1bbd9c ;
+    stop-color: #1ccfac ;
   }
 }
 .welcome-item {
@@ -196,8 +195,7 @@ html, body {
   margin-top: 20px;
   opacity: 0;
   transition: opacity 1.5s ease-in-out 1.5s;
-  color: white; /* Adjust color as needed */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow for better readability */
+  color: rgba(7, 7, 7, 0.859); /* Adjust color as needed */
   z-index: 2; /* Place above name and title */
 }
 
@@ -243,4 +241,29 @@ html, body {
     font-size: 1rem; /* Smaller font size for mobile */
     margin-top: 5px;
   }
+}
+
+.waving-line {
+  animation: wave 3s ease-in-out infinite; /* Adjusted duration for smoother animation */
+}
+
+@keyframes wave {
+  0% {
+    d: path("M0 50 C 720 0, 720 100, 1440 50"); /* Initial position */
+  }
+  25% {
+    d: path("M0 55 C 720 10, 720 90, 1440 55"); /* Raise the wave */
+  }
+  50% {
+    d: path("M0 50 C 720 0, 720 100, 1440 50"); /* Back to initial */
+  }
+  75% {
+    d: path("M0 45 C 720 -5, 720 85, 1440 45"); /* Lower the wave */
+  }
+  100% {
+    d: path("M0 50 C 720 0, 720 100, 1440 50"); /* Back to initial */
+  }
+}
+.svg-container.scrolled{
+  background: linear-gradient(rgba(15, 253, 209, 0.127), rgba(0, 127, 127, 0));
 }
