@@ -51,7 +51,6 @@ function TechStackImageBox() {
       className={`tech-stack-image-box ${isVisible ? "visible" : ""}`}
       ref={containerRef}
     >
-      {/* Overlay for the hovered background */}
       {hoveredBackground && (
         <div
           className="background-overlay"

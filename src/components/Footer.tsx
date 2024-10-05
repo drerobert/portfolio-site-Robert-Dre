@@ -24,6 +24,7 @@ return (
         </div>
       </div>
       <h4>© 2024 Drenyovszki Robert </h4>
+      <h6>All trademarks, service marks, and logos displayed on this site are the property of their respective owners</h6>
     </>
   );
 }

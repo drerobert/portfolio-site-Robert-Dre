@@ -63,26 +63,26 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .button {
-    width: 8vw; /* Adjust size for smaller screens */
-    height: 8vw; /* Adjust size for smaller screens */
+    width: 10vw; 
+    height: 10vw; 
   }
 
   .icon {
-    font-size: 5vw; 
+    font-size: 1vw; 
   }
   .svg-inline--fa{
-    width: 1vw;
+    width: 4vw;
   }
 }
 
 @media (max-width: 480px) {
   .button {
-    width: 10vw; /* Adjust size for very small screens */
-    height: 10vw; /* Adjust size for very small screens */
+    width: 10vw; 
+    height: 10vw; 
   }
 
   .icon {
-    font-size: 1vw; /* Adjust font-size for very small screens */
+    font-size: 1vw; 
   }
   .svg-inline--fa{
     width: 4vw;

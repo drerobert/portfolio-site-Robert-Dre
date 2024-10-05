@@ -14,17 +14,20 @@
   }
 
   @media (max-width: 768px) {
+    .px-5{
+      padding-right:1rem !important;
+      padding-left:2rem !important;
+    }
     .navbar{
         width: 100%; 
         font-size: 20px !important;
-        box-shadow: none; /* Remove box shadow when floating */
         font-weight: 200;
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
+        background-color: rgb(255, 255, 255);
         text-align: center;
         align-items: stretch;
-        height: auto; /* Adjust height for mobile */
+        height: auto; 
+        position: fixed;
+        z-index: 10;
       }
       .main-content {
         margin-left: 0; /* Remove margin for mobile */
@@ -33,23 +36,23 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        justify-content: space-between;
         width: 100%;
       }
       .navbar li {
-        flex-grow: 1 1;
         margin: 0; 
       }
   }
 
   .navbar {
+    background-color: rgb(255, 255, 255);
     left: 0;
     font-size: 5vh;
     transition: width 0.3s ease; 
     display: flex;
     flex-direction: column;
-    background: linear-gradient(rgba(15, 253, 209, 0.259), rgba(0, 127, 127, 0));
-    animation: lightReflection 4s ease-in-out infinite;
+    background: linear-gradient(rgba(15, 253, 209, 0.127), rgba(0, 127, 127, 0));
+    background-blend-mode: overlay; /* Blend the gradient with the background color */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
   
   .navbar.float-left {

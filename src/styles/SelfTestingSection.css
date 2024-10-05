@@ -4,36 +4,3 @@
   font-weight: bold;
   color: #333;
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .navbar {
-    width: 100%;
-    height: auto;
-    position: static;
-  }
-
-  .main-content {
-    margin-left: 0;
-  }
-
-  .svg-container {
-    display: none;
-  }
-
-  .intro-item img {
-    width: 100px;
-    height: 100px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    font-size: 0.75rem;
-  }
-
-  .navbar .nav-link {
-    padding: 0.5rem;
-    font-size: 0.75rem;
-  }
-}

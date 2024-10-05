@@ -8,9 +8,8 @@ html, body {
 
 .section {
   width: 100%;
-  min-height: 100vh;
   display: flex;
-  align-items: center;
+  min-height: 100vh;
   justify-content: center;
 }
 
@@ -34,7 +33,23 @@ html, body {
   align-items: center;
   position: relative;
   overflow: hidden;
-} 
+}
+p{
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+  letter-spacing: .03em;
+}
+p span{
+  color: #0e9479;
+}
+mark{
+  font-weight: bold;
+}
+#contact{
+  min-height: 80vh;
+}
 
 .error-message {
   color: #d9534f; /* Red color for error messages */
