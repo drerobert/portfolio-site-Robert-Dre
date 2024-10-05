@@ -12,6 +12,11 @@ const SelfTestingSection: React.FC = () => {
     const testResults: TestResult[] = [];
 
     for (const testCase of testCases) {
+      // Scroll to the section before running the test if sectionRef is provided
+      if (testCase.sectionRef?.current) {
+        testCase.sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+
       const result = await testCase.test();
       testResults.push({
         name: testCase.name,
@@ -29,8 +34,8 @@ const SelfTestingSection: React.FC = () => {
   return (
     <section ref={selfTestingRef}>
       <h2>Self-Testing Section</h2>
-      <button onClick={runTests} disabled={isRunning}>
-        {isRunning ? 'Running Tests...' : 'Run Self Tests'}
+      <button className="btn btn-primary btn-lg" onClick={runTests} disabled={isRunning}>
+        {isRunning ? 'Running Tests...' : 'Test me!'}
       </button>
 
       {results.length > 0 && (

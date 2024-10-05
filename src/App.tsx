@@ -87,10 +87,10 @@ function App() {
         <section className="section" id="welcome" ref={headingRef}>
           <div id="welcome-wrapper">
             <div className={`welcome-item name ${showName ? "visible" : ""}`}>
-              Drenyovszki Robert
+              <span>Drenyovszki</span> Robert
             </div>
             <div className={`welcome-item title ${showTitle ? "visible" : ""}`}>
-              QA Engineer
+            <span>QA</span> Engineer
             </div>
             <div className={`welcome-item image ${showImage ? "visible" : ""}`}>
               <img src="Images\portrait.jfif" alt="Drenyovszki Robert" />
@@ -98,10 +98,10 @@ function App() {
               <p><span>This</span> site is made from scratch with the intention of trying out new things and in the mean time show people my work experience.
                 It started as a simple site to show my CV and techstack. It became a little creative project. I used Ai heavly during the creation process
                 since I am new to React an typescript.
-                It's not much, but <mark>I enjoyed making and in my opinion that's the point.</mark></p>
+                It's not much, but <mark>I enjoyed making it and in my opinion that's the point.</mark></p>
 
-                <p><span>My</span> name is <mark>Drenyovszki Robert</mark>. I am currently an automation engineer dabbling in some new technologies.
-                The main idea was that this site can test itself within the testing section. I thought it is a fun idea and I wanted to see what would come out of it.
+                <p><span>My</span> name is Drenyovszki Robert. I am currently an automation engineer dabbling in some new technologies.
+                The main idea was that this site can test itself. I thought it is a fun idea and I wanted to see what would come out of it.
                 This is a bit of a personal site so let me tell you about myself. When I was young... Just kidding, I was never young.
                 So anyway Im curious about anything and everything creative. I also like to solve problems in my job and everyday life. Its not always easy, but
                 the payoff is always worth it. Please enjoy the site, <mark>I hope you like it</mark>.</p>

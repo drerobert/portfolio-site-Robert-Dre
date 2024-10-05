@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="contact-section"> 
-      <form onSubmit={handleSubmit} className="p-4 border rounded bg-light "> 
+      <form onSubmit={handleSubmit} className="p-4 border rounded bg-secondary "> 
         <h2 className="mb-4">Contact Me</h2>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name:</label>

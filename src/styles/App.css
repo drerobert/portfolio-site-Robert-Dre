@@ -166,19 +166,24 @@ mark{
 }
 
 .name {
-  font-size: 10rem; /* Adjust as needed */
-  color: #34495E ;
+  font-size: 8rem; /* Adjust as needed */
+  color: #406b7b ;
+  font-weight: bold;
   z-index: 1; /* Place behind image */
   align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
   letter-spacing: 0.1em; /* Add spacing between letters */
   font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
 }
+.name span{
+  color: #0e9479;
+}
 
 .title {
-  font-size: 10rem; /* Adjust as needed */
+  font-size: 8rem; /* Adjust as needed */
   z-index: 1; /* Place behind image */
-  color: #34495E ;
+  color: #5a758f ;
+  font-weight: bold;
   align-items: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
   letter-spacing: 0.1em; /* Add spacing between letters */
@@ -223,6 +228,7 @@ mark{
   width: 20vw; /* Adjust size as needed */
   height: 20vw; /* Adjust size as needed */
   object-fit: cover; /* Ensures the image covers the container without distortion */
+  margin-right: 40px;
 }
 
 /* Responsive adjustments */
@@ -250,6 +256,7 @@ mark{
     height: 50vw; /* Adjust size for smaller screens */
     max-width: 250px; /* Max size for smaller screens */
     max-height: 250px; /* Max size for smaller screens */
+    margin: 0;
   }
 
   .overlay-text {
